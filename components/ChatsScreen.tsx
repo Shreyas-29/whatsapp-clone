@@ -139,7 +139,7 @@ function ChatsScreen({ chat, messages }: Props) {
               <Avatar className='cursor-pointer mr-2'>{recipientEmail[0]}</Avatar>
             )}
             <div className='flex flex-col items-start relative'>
-              <h4 className='text-white w-40 overflow-hidden sm:text-gray-900 text-sm font-medium'>
+              <h4 className='text-white w-40 sm:w-full overflow-hidden sm:text-gray-900 text-sm font-medium'>
                 {recipientEmail}
               </h4>
               {/* {recipientSnapshot ? (

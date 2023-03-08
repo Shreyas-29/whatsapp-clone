@@ -65,7 +65,7 @@ function ProfileScreen({ user, signOut }: any) {
 
   return (
     <section className='flex-1 flex flex-col items-center justify-center'>
-      <header className='flex items-center mb-20 w-full mx-auto bg-primary sm:bg-white py-4 px-4'>
+      <header className='flex items-center mb-20 w-full mx-auto bg-teal sm:bg-white py-4 px-4'>
         <Link href={'/'} className='flex items-center'>
           <div className='p-2.5 rounded-full sm:hover:bg-secondary cursor-pointer w-9 h-9 flex items-center mr-2'>
             <HiArrowLeft className='w-6 h-6 text-white sm:text-gray-700 cursor-pointer' />
@@ -92,7 +92,7 @@ function ProfileScreen({ user, signOut }: any) {
               height={500}
               className='w-24 h-24 object-cover rounded-full'
             />
-            <MdPhotoCamera className='bg-green-500 p-2 rounded-full text-white w-8 h-8 absolute bottom-0 right-0 z-10 shadow-md' />
+            <MdPhotoCamera className='bg-teal/80 border border-teal p-2 rounded-full text-white w-8 h-8 absolute bottom-0 right-0 z-10 shadow-md' />
           </div>
         ) : (
           <div onClick={() => fileRef.current?.click()} className='relative cursor-pointer'>
@@ -110,10 +110,10 @@ function ProfileScreen({ user, signOut }: any) {
               height={500}
               className='w-24 h-24 object-cover rounded-full'
             />
-            <MdPhotoCamera className='bg-green-500 p-2 rounded-full text-white w-8 h-8 absolute bottom-0 right-0 z-10 shadow-md' />
+            <MdPhotoCamera className='bg-teal/80 border border-teal p-2 rounded-full text-white w-8 h-8 absolute bottom-0 right-0 z-10 shadow-md' />
           </div>
         )}
-        <div className='mt-16 mx-auto w-full flex flex-col items-center max-w-sm'>
+        <div className='mt-16 mx-auto w-full flex flex-col items-center max-w-xs sm:max-w-sm'>
           <div className='flex items-start space-x-4 w-full'>
             <BsFillPersonFill className='text-slate-500 w-9 h-9 cursor-pointer' />
             <div className='flex flex-col items-start mb-2'>
@@ -129,7 +129,7 @@ function ProfileScreen({ user, signOut }: any) {
               <p className='select-none text-xs mt-2 text-gray-400'>This is not your username or pin. This mame will be visible to your Whatsapp contacts.</p>
             </div>
             <label htmlFor="name">
-              <HiPencil className='text-green-500 w-7 h-7 cursor-pointer' />
+              <HiPencil className='text-teal2 w-7 h-7 cursor-pointer' />
             </label>
           </div>
           <div className='flex items-start space-x-4 mt-4 w-full'>
@@ -144,7 +144,7 @@ function ProfileScreen({ user, signOut }: any) {
               className="block w-full border placeholder:capitalize border-gray-300 rounded-md py-2 px-3 mb-3 outline-none"
             />
             <label htmlFor="email">
-              <HiPencil className='text-green-500 w-7 h-7 cursor-pointer' />
+              <HiPencil className='text-teal2 w-7 h-7 cursor-pointer' />
             </label>
           </div>
           {error && (
@@ -153,19 +153,19 @@ function ProfileScreen({ user, signOut }: any) {
             </p>
           )}
           <div className='mt-12 w-full'>
-            <button onClick={handleSaveProfile} className='w-full bg-primary hover:bg-green-500 hover:shadow-lg active:scale-90 hover:shadow-primary/40 transition-all py-2 rounded-md text-white font-medium'>
+            <button onClick={handleSaveProfile} className='w-full bg-teal hover:bg-teal2 hover:shadow-lg active:scale-90 hover:shadow-teal/40 transition-all py-2 rounded-md text-white font-medium'>
               Update profile
             </button>
           </div>
         </div>
         <div className='flex items-center justify-center mt-8 w-full'>
-          <button onClick={signOut} className='w-full bg-primary hover:bg-green-500 hover:shadow-lg active:scale-90 hover:shadow-primary/40 transition-all py-2 rounded-md text-white font-medium'>
+          <button onClick={signOut} className='w-full bg-teal hover:bg-teal2 hover:shadow-lg active:scale-90 hover:shadow-teal/40 transition-all py-2 rounded-md text-white font-medium'>
             Sign out from whatsapp
           </button>
         </div>
       </div>
       {success && (
-        <p className='absolute px-4 py-2 rounded-lg bg-white text-primary border bottom-4 shadow-lg'>
+        <p className='absolute px-4 py-2 rounded-lg bg-white text-teal border bottom-4 shadow-lg'>
           Profile updated successfully!
         </p>
       )}

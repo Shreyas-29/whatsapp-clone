@@ -126,7 +126,7 @@ function ChatsScreen({ chat, messages }: Props) {
 
   return (
     <section className='w-full h-full border-l relative'>
-      <header className='fixed top-0 left-0 lg:left-96 right-0 bg-primary sm:bg-white pt-4 pb-4 px-4 z-50 shadow'>
+      <header className='fixed top-0 left-0 lg:left-96 right-0 bg-teal sm:bg-white pt-4 pb-4 px-4 z-50 shadow'>
         {/* <header className='sticky top-0 h-28 bg-white pt-8 pb-4 px-4 z-50 shadow'> */}
         <div className='flex items-center justify-between w-full'>
           <div className='flex items-center cursor-pointer'>
@@ -139,7 +139,7 @@ function ChatsScreen({ chat, messages }: Props) {
               <Avatar className='cursor-pointer mr-2'>{recipientEmail[0]}</Avatar>
             )}
             <div className='flex flex-col items-start relative'>
-              <h4 className='text-white sm:text-gray-900 text-sm font-medium'>
+              <h4 className='text-white w-40 overflow-hidden sm:text-gray-900 text-sm font-medium'>
                 {recipientEmail}
               </h4>
               {/* {recipientSnapshot ? (
@@ -194,11 +194,11 @@ function ChatsScreen({ chat, messages }: Props) {
             <BiSearch className='w-5 h-5 text-white sm:text-gray-700 cursor-pointer' />
             <BiDotsVerticalRounded className='w-5 h-5 text-white sm:text-gray-700 cursor-pointer' />
           </div>
-          <div className='h-16 w-28 bg-gradient-to-l from-primary border-white absolute z-10 right-16 top-0 inline sm:hidden'></div>
+          <div className='h-16 w-28 bg-gradient-to-l from-teal border-white absolute z-10 right-16 top-0 inline sm:hidden'></div>
         </div>
       </header>
 
-      <div ref={messagesRef} className='pb-8 pt-28 pr-4 pl-8 w-full min-h-screen bg-center' style={{ backgroundImage: `url('https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg')` }}>
+      <div ref={messagesRef} className='pb-8 pt-24 px-4 w-full min-h-screen bg-center' style={{ backgroundImage: `url('https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg')` }}>
         {showMessages()}
         <div ref={endOfMessageRef}></div>
       </div>
@@ -218,11 +218,11 @@ function ChatsScreen({ chat, messages }: Props) {
             onFocus={scrollToBottomOnFocus}
             onChange={(e) => setInput(e.target.value)}
             placeholder='Type a message'
-            className={`border flex-1 rounded-md px-4 py-1 sm:py-2 outline-none hover:border-primary focus-within:border-primary`}
+            className={`border flex-1 rounded-md px-4 py-1 sm:py-2 outline-none hover:border-teal focus-within:border-teal`}
           />
           {/*  */}
           {input ? (
-            <button type='submit' className='p-2 w-9 h-9 rounded-full bg-primary flex items-center'>
+            <button type='submit' className='p-2 w-9 h-9 rounded-full bg-teal flex items-center'>
               <IoSendSharp className='w-5 h-5 text-white' />
             </button>
           ) : (

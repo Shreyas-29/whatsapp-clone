@@ -123,7 +123,6 @@ function ChatsScreen({ chat, messages }: Props) {
     return () => unsubscribe();
   }, [recipientQuery]);
 
-
   return (
     <section className='w-full h-full border-l relative'>
       <header className='fixed top-0 left-0 lg:left-96 right-0 bg-teal sm:bg-white pt-4 pb-4 px-4 z-50 shadow'>
